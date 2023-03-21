@@ -1,0 +1,18 @@
+{% extends 'html/base.html' %}
+{% load static %}
+{% block content %}
+    <div class="cont">
+        <form action='/search' method='POST'>
+            <input class="inp" name='text'>
+            <button class="search_butt">Search</button>
+            {% csrf_token %}
+        </form>
+    </div>
+    <div class="header_div">
+        {% for product in products %}
+                    <a href="{{product.get_absolute_url}}">
+                    {% include 'html/product.html' %}
+                    </a>
+        {% endfor %}
+    </div>
+{% endblock %}

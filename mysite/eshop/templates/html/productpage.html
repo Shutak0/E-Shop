@@ -1,0 +1,19 @@
+{% extends 'html/base.html' %}
+{% load static %}
+{% block content%}
+<div class="tov">
+    <div class="tov1">
+        <div class="img_tov">
+            <img class="header_img" src={{product.image.url}}>
+        </div>
+    </div>
+    <div class="tov2">
+        <h3 class="header_h3">{{product.name}}</h3>
+        <p class="header_p">{{product.text}}</p>
+        <div class="header_div_div_div">
+            <p class="header_p">amount: {{product.amount}}</p>
+            <p class="header_p">cost: {{product.cost}}</p>
+        </div>
+    </div>
+</div>
+{% endblock %}

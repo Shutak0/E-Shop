@@ -1,0 +1,11 @@
+{% load static %}
+{% block content %}
+<section class="logreg">
+<h2>Log in</h2>
+<form method='post' id='formlog'>
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type='submit'>Log in</button>
+</form>
+</section>
+{% endblock content %}

@@ -1,0 +1,11 @@
+{% extends 'html/base.html' %}
+{% load static %}
+{% block content %}
+<div class="header_div">
+    {% for categorie in categories %}
+        <a href={{categorie.get_absolute_url}}>
+        {% include 'html/categorie.html' %}
+        </a>
+    {% endfor %}
+</div>
+{% endblock %}

@@ -1,0 +1,142 @@
+.container{
+    display: flex;
+    width: 100%;
+}
+h1{
+    position: top;
+	font-weight: 10; 
+	font-size: 45px; 
+	text-align: left;
+	color: rgb(255, 255, 255); 
+	margin: 0;
+}
+h2{
+    font-weight: 700; 
+	font-size: 30px;
+	line-height: 22px; 
+	color: #212121; 
+}
+h3{
+	font-weight: 600; 
+	font-size: 20px; 
+	line-height: 22px;
+	color: #212121;
+}
+p{
+    font-size: 18px;  
+	line-height: 22px; 
+	color: #000000;
+}
+button{
+	background-color: #fdfdfd;
+	font-size: 20px; 
+	color:rgb(217, 214, 36); 
+    font-weight: 100;  
+	text-align: center;
+	line-height: 8px;
+	border: none; 
+	outline: none;
+	border-radius: 0; 
+}
+button:hover{
+    background-color: #002d70;
+	transition: 0.3s; 
+}
+button:active{
+    background-color: #00144a; 
+	transition: 0.3s;
+}
+button.outline{
+    padding: 22px 42px; background-color: transparent; 
+	font-size: 20px; 
+	color: #212121; 
+	text-align: center;
+	line-height: 22px; 
+	text-transform: uppercase; 
+	cursor: pointer;
+	border: 3px solid #212121; 
+	outline: none;
+	border-radius: 0;
+}
+button.outline:hover{
+    background-color: #007065; 
+	border-color: #007065 !important; 
+	color: #fff; 
+	transition: 0.3s
+}
+button.outline:active{
+    background-color: #004a43; 
+	color: #fff; 
+	transition: 0.3s;
+}
+.header_img{
+	width: 100%;
+}
+.header_div_div_div{
+	display: flex;
+	justify-content: space-between;
+}
+header{
+    background-color: rgb(158, 162, 237);
+	background-size: cover;
+	background-position: center 30%;
+	position: relative;
+	z-index: 1;
+	width: 100%;
+	height: 100%;
+}
+nav{
+	width:100%;
+	background-color: #d7e2fb;
+}
+.nav_a{
+    margin-right: 7%;
+    margin-left: 7%;
+    width: 100%;
+}
+.nav_h2{
+    width: 100%; 
+}
+.nav_p{
+    width: 100%;
+}
+.header_div{
+    display: flex;
+	flex-wrap: wrap;
+    justify-content: left;
+}
+.header_div_div{
+    background-color: #ffffff;
+    margin-left: 6%;
+    margin-right: 6%;
+	width: 180px;
+	margin-top: 30px;
+}
+.header_img{
+	width: 100%;
+	height: 30%;
+}
+.tov{
+	margin-left: 15%;
+	margin-right: 15%;
+	background-color: #f7f4b4;
+}
+.tov1{
+	display: flex;
+	justify-content: center;
+}
+.tov2{
+	margin-left: 10%;
+	margin-right: 10%;
+}
+.img_tov{
+	width: 10%;
+	height: 10%;
+}
+.cont{
+	display: flex;
+	justify-content: center;
+}
+.inp, .search_butt{
+	margin-top: 2%;
+}

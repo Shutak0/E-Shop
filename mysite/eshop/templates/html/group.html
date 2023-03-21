@@ -1,0 +1,9 @@
+{% extends 'html/base.html' %}
+{% load static %}
+{% block content%}
+    {% for product in products %}
+        <a href="{{product.get_absolute_url}}">
+        {% include 'html/product.html' %}
+        </a>
+    {% endfor %}
+{% endblock %}

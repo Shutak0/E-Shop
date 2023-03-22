@@ -3,20 +3,20 @@ from .models import Product, Group
 from django.shortcuts import get_object_or_404
 def index(request): 
     '''
-    Для index.html, возвращает список всех существующих товаров, пока без сортировки, + прогружает страницу.
+    For index.html, returns a list of all existing products, not sorted yet, + loads the page.
     '''
     products = Product.objects.all()
     return render(request, 'html/index.html', {'products':products})
 def productpage(request, id, slug): 
     '''
-    Для productpage.html, генерирует страницу с конкретным товаром по id и slug, ссылка на который доступна из index.html/search.html. Прогружает страницу.
+    For productpage.html, generates a page with a specific product by id and slug, the link to which is available from index.html/search.html. Loads the page.
     '''
     id = int(id)
     product = get_object_or_404(Product, id=id, slug=slug)
     return render(request, 'html/productpage.html', {'product':product})
 def search(request):
     '''
-    Для search.html, в случае поиска по какому-то слову - ищет по тому слову во всех товарах, и выдаёт искомое; прогружает страницу.
+    For search.html, in case of searching for a certain word, it searches for that word in all products, and returns the search result; loads the page.
     '''
     needed = None
     text_search = None
@@ -26,15 +26,14 @@ def search(request):
     return render(request, 'html/search.html', {'products':needed})
 def categories(request):
     '''
-    Формирует страницу со списком всех существующих групп товаров.
+    Generates a page with a list of all existing product groups.
     '''
     categories = Group.objects.all()
     return render(request, 'html/categories.html', {'categories': categories})
 def group(request, name):
     '''
-    Должно бы действовать по аналогии с productpage, ища нужный список продуктов, относящихся к одной группе товаров.
-    Получает имя и запрос из models.py Group get_absolute_url().
-    Любит вредничать.
+    It should act like a productpage, looking for the desired list of products that belong to the same product group.
+    Gets name and query from models.py Group get_absolute_url().
     '''
     needed = Product.objects.filter(group__name=name)
     return render(request, 'html/group.html', {'products': needed})

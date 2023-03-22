@@ -2,7 +2,7 @@
 <nav>
     <div class="container">
         <a class="nav_a">
-            <h2 class="nav_h2">Sson</h2>
+            <h2 class="nav_h2">EShop</h2>
         </a>
         <a class="nav_a" href="/">
             <p class="nav_p">Home</p>
@@ -13,8 +13,15 @@
         <a class="nav_a" href='/search'>  
             <p class="nav_p">Search</p>
         </a>
-        <a class="nav_a">  
-            <p class="nav_p">Log in</p>
-        </a>
+        {% if user.is_authenticated %}
+            <p class="nav_p">User: {{ user.get_username }}</p>
+            <a class="nav_a" href="{% url 'logout' %}?next={{request_path}}">
+                <p class="nav_p">Logout</p>
+            </a>    
+        {% else %}
+            <a class="nav_a" href="{% url 'login' %}?next={{request_path}}">
+                <p class="nav_p">Login</p>
+            </a>    
+        {% endif %}
     </div>
 </nav>

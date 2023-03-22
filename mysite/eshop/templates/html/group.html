@@ -1,9 +1,11 @@
 {% extends 'html/base.html' %}
 {% load static %}
 {% block content%}
+<div class="header_div">
     {% for product in products %}
         <a href="{{product.get_absolute_url}}">
         {% include 'html/product.html' %}
         </a>
     {% endfor %}
+</div>
 {% endblock %}

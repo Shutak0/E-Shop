@@ -2,10 +2,13 @@
 {% load static %}
 {% block content %}
 <div class="header_div">
+    
     {% for categorie in categories %}
+    <div class="header_div_div">
         <a href={{categorie.get_absolute_url}}>
         {% include 'html/categorie.html' %}
         </a>
+    </div>
     {% endfor %}
 </div>
 {% endblock %}

@@ -38,3 +38,7 @@ def group(request, name):
     '''
     needed = Product.objects.filter(group__name=name)
     return render(request, 'html/group.html', {'products': needed})
+def login(request):
+    return render(request, 'html/login.html')
+def profile(request):
+    return render(request, 'html/profile.html')

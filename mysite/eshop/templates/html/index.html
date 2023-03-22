@@ -2,15 +2,17 @@
 {% load static %}
 {% block content%}
     <header>
-        <h1>
-            Here you can view some latest offers
-        </h1>
-            <div class="header_div">
-                {% for product in products %}
-                    <a href="{{product.get_absolute_url}}">
-                    {% include 'html/product.html' %}
-                    </a>
-                {% endfor %}
-            </div>
+        <div class="index_h1_div"> 
+            <h1 class="index_h1">
+                Recommendations for you
+            </h1>
+        </div>
+        <div class="header_div">
+            {% for product in products %}
+                <a href="{{product.get_absolute_url}}">
+                {% include 'html/product.html' %}
+                </a>
+            {% endfor %}
+        </div>
     </header>
 {% endblock %}
